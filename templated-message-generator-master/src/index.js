@@ -173,7 +173,7 @@ function formatSecondMessage(values) {
     return MessageStr;
 }
 
-function checkRSI() {
+function checkRSI(values) {
 	const incident = values.incident;
     if (incident == "RSI"){
 	var x= document.getElementById("ESS");
