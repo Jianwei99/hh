@@ -422,7 +422,6 @@ class FormPage extends React.Component {
                                     </label>
                                     <ErrorMessage name="ESS" component="div" className="field-error mb-0" />
                                 </div>
-                                    </div>
                                 )}
                             </div>
 
