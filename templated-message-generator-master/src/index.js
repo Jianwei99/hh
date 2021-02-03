@@ -86,6 +86,7 @@ const initialValues = {
     ],
     certNo: "",
     swabbed: "",
+    ESS: "",
 };
 
 function formatStatusContents(values) {
@@ -151,6 +152,7 @@ function formatSecondMessageContents(values) {
     let MessageStr = `*${rank} ${name}* has been prescribed with << *${hasMedication}* >> and given << *${status}* >>. \n`;
     MessageStr += `MC Number: ${certNo} \n`;
     MessageStr += `Swab Test: *${swabbed}*\n\n`;
+    MessageStr += `Updated ESS: *${ESS}*\n\n\n`;
 
     return MessageStr;
 }
@@ -170,6 +172,14 @@ function formatSecondMessage(values) {
     MessageStr += `For your update and information.`;
 
     return MessageStr;
+}
+
+function checkRSI {
+    if (values.incident !== "RSI"){
+	var x= document.getElementById("ESS");
+	x.style.display="none";
+	
+    }
 }
 
 class FormPage extends React.Component {
@@ -396,6 +406,21 @@ class FormPage extends React.Component {
                                     </div>
                                 )}
                             </div>
+			    
+                            <div id=ESS className="form-row mt-3">
+                                <div className="form-group col-12">
+                                    <p className="mb-0">Did you update ESS?</p>
+                                    <label htmlFor='ESS-yes' className="mb-0">
+                                        <Field type="radio" name="ESS" id="ESS-yes" value="Yes" className="mr-1"/>
+                                        Yes
+                                    </label>
+                                    <label htmlFor="ESS-no" className="mb-0 ml-3">
+                                        <Field type="radio" name="ESS" id="ESS-no" value="No" className="mr-1"/>
+                                        No
+                                    </label>
+                                    <ErrorMessage name="ESS" component="div" className="field-error mb-0" />
+                                </div>
+                            </div>
 
                             <div className="form-row mt-3">
                                 <div className="form-group col-12">
@@ -469,4 +494,3 @@ ReactDOM.render(
     </ErrorBoundary>,
     document.getElementById('root')
 );
-
