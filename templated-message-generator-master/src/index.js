@@ -407,7 +407,7 @@ class FormPage extends React.Component {
                                     </div>
                                 )}
                             </div>
-				<div className="form-row mb-3">
+				<div className="form-row mt-3">
 				    <div className="form-group col-12">
                                     <p className="mb-0">Did you go through a swab test?</p>
                                     <label htmlFor='swabbed-yes' className="mb-0">
@@ -421,7 +421,7 @@ class FormPage extends React.Component {
                                     <ErrorMessage name="swabbed" component="div" className="field-error mb-0" />
 				</div>
                             </div>
-			  	<div className="form-row mb-3">
+			  	<div className="form-row mt-3">
 				{values.incident !== "RSI" && (
 				    <div className="form-group col-12">
                                     <p className="mb-0">Did you update ESS?</p>
@@ -442,7 +442,7 @@ class FormPage extends React.Component {
                                 )}
 			    </div>
 
-                            <div className="form-row mb-4">
+                            <div className="form-row mb-3">
                                 <p className="mb-0">Your 2nd Message:</p>
                                 <Field id="second-message" as="textarea" readOnly className="form-control mb-2" value={formatSecondMessage(values)} />
                                 <button data-clipboard-target="#second-message" className="btn btn-dark">
