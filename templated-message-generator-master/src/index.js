@@ -405,7 +405,7 @@ class FormPage extends React.Component {
                                 )}
                             </div>
 			    
-                            <div id=ESS className="form-row mt-3">
+                            <div id="ESS" className="form-row mt-3">
                                 <div className="form-group col-12">
                                     <p className="mb-0">Did you update ESS?</p>
                                     <label htmlFor='ESS-yes' className="mb-0">
