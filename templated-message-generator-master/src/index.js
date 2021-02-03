@@ -421,7 +421,7 @@ class FormPage extends React.Component {
                                     <ErrorMessage name="swabbed" component="div" className="field-error mb-0" />
 				</div>
                             </div>
-			  	<div className="form-row mt-1">
+			  	<div className="form-row mt-0.5">
 				{values.incident !== "RSI" && (
 				    <div className="form-group col-12">
                                     <p className="mb-0">Did you update ESS?</p>
