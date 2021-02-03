@@ -405,7 +405,23 @@ class FormPage extends React.Component {
                                     </div>
                                 )}
                             </div>
-			    
+
+				<div className="form-row mt-3">
+                                <div className="form-group col-12">
+                                    <p className="mb-0">Did you go through a swab test?</p>
+                                    <label htmlFor='swabbed-yes' className="mb-0">
+                                        <Field type="radio" name="swabbed" id="swabbed-yes" value="Yes" className="mr-1"/>
+                                        Yes
+                                    </label>
+                                    <label htmlFor="swabbed-no" className="mb-0 ml-3">
+                                        <Field type="radio" name="swabbed" id="swabbed-no" value="No" className="mr-1"/>
+                                        No
+                                    </label>
+                                    <ErrorMessage name="swabbed" component="div" className="field-error mb-0" />
+                                </div>
+                            </div>
+
+			  	<div className="form-row mt-3">
 				{values.incident !== "RSI" && (
 				    <div className="form-group col-12">
                                     <p className="mb-0">Did you update ESS?</p>
@@ -420,21 +436,7 @@ class FormPage extends React.Component {
                                     <ErrorMessage name="ESS" component="div" className="field-error mb-0" />
 				    </div>
                                 )}
-
-                            <div className="form-row mt-3">
-                                <div className="form-group col-12">
-                                    <p className="mb-0">Did you go through a swab test?</p>
-                                    <label htmlFor='swabbed-yes' className="mb-0">
-                                        <Field type="radio" name="swabbed" id="swabbed-yes" value="Yes" className="mr-1"/>
-                                        Yes
-                                    </label>
-                                    <label htmlFor="swabbed-no" className="mb-0 ml-3">
-                                        <Field type="radio" name="swabbed" id="swabbed-no" value="No" className="mr-1"/>
-                                        No
-                                    </label>
-                                    <ErrorMessage name="swabbed" component="div" className="field-error mb-0" />
-                                </div>
-                            </div>
+			    </div>
 
                             <div className="form-row mb-4">
                                 <p className="mb-0">Your 2nd Message:</p>
