@@ -152,7 +152,7 @@ function formatSecondMessageContents(values) {
 
     let MessageStr = `*${rank} ${name}* has been prescribed with << *${hasMedication}* >> and given << *${status}* >>. \n`;
     MessageStr += `MC Number: ${certNo} \n`;
-    MessageStr += `Swab Test: *${swabbed}*\n\n`;
+    MessageStr += `Swab Test: *${swabbed}*\n`;
     MessageStr += `Updated ESS: *${ESS}*\n\n`;
 
     return MessageStr;
