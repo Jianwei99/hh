@@ -162,8 +162,6 @@ function formatSecondMessageContents(values) {
     MessageStr += `Updated ESS: *NIL*\n\n`;
     return MessageStr;
     }
-    if (hasStatus == "Yes" && certNo == "NIL")
-   alert("Please Enter Your MC number if you have a status.");
 }
 
 function formatFirstMessage(values) {
@@ -175,6 +173,10 @@ function formatFirstMessage(values) {
 }
 
 function formatSecondMessage(values) {
+    const hasStatus = values.hasStatus;
+    const certNo = values.certNo;
+    if (hasStatus == "Yes" && certNo == "NIL")
+   	alert("Please Enter Your MC number if you have a status.");
     let MessageStr = "Dear Sirs/Ma'am,\n\n";
     MessageStr += formatFirstMessageContents(values);
     MessageStr += formatSecondMessageContents(values);
