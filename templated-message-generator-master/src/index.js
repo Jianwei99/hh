@@ -404,13 +404,13 @@ class FormPage extends React.Component {
                                             <div className="form-group col-12">
                                                 <label htmlFor="certNo">MC Number</label>
                                                 <Field name="certNo" type="text" className={`form-control ${errors.certNo && touched.certNo ? 'invalid-field' : 'valid-field'}`} />
-						<script>
+						{
 						const Status = Values.hasStatus;
 						const CertNo = Values.CertNo;
 						if (Status == "Yes" && CertNo == NIL){
 						window.alert("Please Enter your MC number if you have status");
 						}
-						</script>
+						}
                                                 <ErrorMessage name="certNo" component="div" className="field-error mb-0" />
                                                 <small className="form-text text-muted mt-0">
                                                     Excuses have MC Numbers as well. If you did not get any MC or status, put "NIL".
