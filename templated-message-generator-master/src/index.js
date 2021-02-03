@@ -173,11 +173,10 @@ function formatSecondMessage(values) {
     return MessageStr;
 }
 
-function checkRSI {
+function checkRSI() {
     if (values.incident !== "RSI"){
 	var x= document.getElementById("ESS");
 	x.style.display="none";
-	
     }
 }
 
