@@ -421,6 +421,13 @@ class FormPage extends React.Component {
                                     </label>
                                     <ErrorMessage name="ESS" component="div" className="field-error mb-0" />
                                 </div>
+				{values.incident !== "RSI" && (
+                                    <div className="form-group col-12">
+                                        <label htmlFor="ESS">ESS</label>
+                                        <Field name="ESS" type="text" className={`form-control ${errors.ESS && touched.ESS ? 'invalid-field' : 'valid-field'}`} />
+                                        <ErrorMessage name="ESS" component="div" className="field-error mb-0" />
+                                    </div>
+                                )}
                             </div>
 
                             <div className="form-row mt-3">
