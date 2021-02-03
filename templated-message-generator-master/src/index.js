@@ -151,9 +151,6 @@ function formatSecondMessageContents(values) {
     const ESS = values.ESS;
     const incident = values.incident;
 	
-   if (hasStatus == "Yes" && certNo == "NIL"){
-   alert("Please Enter Your MC number if you have a status.");
-   }
     let MessageStr = `*${rank} ${name}* has been prescribed with << *${hasMedication}* >> and given << *${status}* >>. \n`;
     MessageStr += `MC Number: ${certNo} \n`;
     MessageStr += `Swab Test: *${swabbed}*\n`;
@@ -165,6 +162,8 @@ function formatSecondMessageContents(values) {
     MessageStr += `Updated ESS: *NIL*\n\n`;
     return MessageStr;
     }
+    if (hasStatus == "Yes" && certNo == "NIL")
+   alert("Please Enter Your MC number if you have a status.");
 }
 
 function formatFirstMessage(values) {
