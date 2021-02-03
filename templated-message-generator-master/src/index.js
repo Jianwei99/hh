@@ -159,7 +159,7 @@ function formatSecondMessageContents(values) {
     return MessageStr;
     }
     else{
-    MessageStr += `Updated ESS: *NIL*\n\n`;
+    MessageStr += `Updated ESS: *N/A*\n\n`;
     return MessageStr;
     }
 }
@@ -432,6 +432,10 @@ class FormPage extends React.Component {
                                     <label htmlFor="ESS-no" className="mb-0 ml-3">
                                         <Field type="radio" name="ESS" id="ESS-no" value="No" className="mr-1"/>
                                         No
+                                    </label>
+				    <label htmlFor="ESS-N/A" className="mb-0 ml-3">
+                                        <Field type="radio" name="ESS" id="ESS-N/A" value="N/A" className="mr-1"/>
+                                        N/A
                                     </label>
                                     <ErrorMessage name="ESS" component="div" className="field-error mb-0" />
 				    </div>
