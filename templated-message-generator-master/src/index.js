@@ -174,7 +174,8 @@ function formatSecondMessage(values) {
 }
 
 function checkRSI() {
-    if (values.incident !== "RSI"){
+	const incident = values.incident;
+    if (incident == "RSI"){
 	var x= document.getElementById("ESS");
 	x.style.display="none";
     }
