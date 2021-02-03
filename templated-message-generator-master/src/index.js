@@ -148,10 +148,12 @@ function formatSecondMessageContents(values) {
     const status = hasStatus === "Yes" ? formatStatusContents(values) : "NIL";
     const certNo = values.hasStatus === "Yes" ? values.certNo.toUpperCase().trim() : "NIL";
     const swabbed = values.swabbed;
+    const ESS = values.ESS;
 
     let MessageStr = `*${rank} ${name}* has been prescribed with << *${hasMedication}* >> and given << *${status}* >>. \n`;
     MessageStr += `MC Number: ${certNo} \n`;
     MessageStr += `Swab Test: *${swabbed}*\n\n`;
+    MessageStr += `Updated ESS: *${ESS}*\n\n\n`;
 
     return MessageStr;
 }
