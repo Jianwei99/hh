@@ -149,13 +149,19 @@ function formatSecondMessageContents(values) {
     const certNo = values.hasStatus === "Yes" ? values.certNo.toUpperCase().trim() : "NIL";
     const swabbed = values.swabbed;
     const ESS = values.ESS;
+    const incident = values.incident;
 
     let MessageStr = `*${rank} ${name}* has been prescribed with << *${hasMedication}* >> and given << *${status}* >>. \n`;
     MessageStr += `MC Number: ${certNo} \n`;
     MessageStr += `Swab Test: *${swabbed}*\n`;
+    if (incident != "RSI"){
     MessageStr += `Updated ESS: *${ESS}*\n\n`;
-
     return MessageStr;
+    }
+    else{
+    MessageStr += `Updated ESS: *NIL*\n\n`;
+    return MessageStr;
+    }
 }
 
 function formatFirstMessage(values) {
