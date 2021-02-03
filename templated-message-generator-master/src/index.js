@@ -150,8 +150,6 @@ function formatSecondMessageContents(values) {
     const swabbed = values.swabbed;
     const ESS = values.ESS;
     const incident = values.incident;
-    if (hasStatus == "Yes" && certNo == "NIL")
-    alert("Please Enter Your MC number if you have a status.");
 	
     let MessageStr = `*${rank} ${name}* has been prescribed with << *${hasMedication}* >> and given << *${status}* >>. \n`;
     MessageStr += `MC Number: ${certNo} \n`;
@@ -409,7 +407,6 @@ class FormPage extends React.Component {
                                     </div>
                                 )}
                             </div>
-
 				<div className="form-row mt-3">
                                 <div className="form-group col-12">
                                     <p className="mb-0">Did you go through a swab test?</p>
@@ -424,7 +421,6 @@ class FormPage extends React.Component {
                                     <ErrorMessage name="swabbed" component="div" className="field-error mb-0" />
                                 </div>
                             </div>
-
 			  	<div className="form-row mt-3">
 				{values.incident !== "RSI" && (
 				    <div className="form-group col-12">
