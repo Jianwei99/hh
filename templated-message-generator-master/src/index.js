@@ -409,7 +409,8 @@ class FormPage extends React.Component {
                             </div>
 			    
                             <div id="ESS" className="form-row mt-3">
-                                <div className="form-group col-12">
+				{values.incident !== "RSI" && (
+                                    <div className="form-group col-12">
                                     <p className="mb-0">Did you update ESS?</p>
                                     <label htmlFor='ESS-yes' className="mb-0">
                                         <Field type="radio" name="ESS" id="ESS-yes" value="Yes" className="mr-1"/>
@@ -421,11 +422,6 @@ class FormPage extends React.Component {
                                     </label>
                                     <ErrorMessage name="ESS" component="div" className="field-error mb-0" />
                                 </div>
-				{values.incident !== "RSI" && (
-                                    <div className="form-group col-12">
-                                        <label htmlFor="ESS">ESS</label>
-                                        <Field name="ESS" type="text" className={`form-control ${errors.ESS && touched.ESS ? 'invalid-field' : 'valid-field'}`} />
-                                        <ErrorMessage name="ESS" component="div" className="field-error mb-0" />
                                     </div>
                                 )}
                             </div>
