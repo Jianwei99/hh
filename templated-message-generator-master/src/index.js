@@ -312,7 +312,7 @@ class FormPage extends React.Component {
                             <small className="form-text text-muted mt-0">Fill up this section after you have seen the doctor.</small>
                             <hr className="mt-1" />
 
-                            <div className="form-row">
+                            <div className="form-row mt-3">
                                 <div className="col-12">
                                     <p className="mb-0">Did you obtain any medications from the doctor?</p>
                                     <label htmlFor='medication-yes' className="mb-0">
